@@ -10,8 +10,11 @@ public class Player : MonoBehaviour {
 
     private PhysicsController physics;
 
+    public static Player instance;
+
     private void Awake()
     {
+        instance = this;
         physics = GetComponent<PhysicsController>();
     }
 

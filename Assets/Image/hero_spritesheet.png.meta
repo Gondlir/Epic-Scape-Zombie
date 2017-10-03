@@ -1,17 +1,17 @@
 fileFormatVersion: 2
 guid: 4139d4e7f90a15a45a44aec9678332f1
-timeCreated: 1506667169
+timeCreated: 1506727169
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: hero_spritesheet_0
-    21300002: hero_spritesheet_1
-    21300004: hero_spritesheet_2
-    21300006: hero_spritesheet_3
-    21300008: hero_spritesheet_4
-    21300010: hero_spritesheet_5
-    21300012: hero_spritesheet_6
-    21300014: hero_spritesheet_7
+    21300000: hero_idle_0
+    21300002: hero_idle_1
+    21300004: hero_idle_2
+    21300006: hero_idle_3
+    21300008: hero_idle_4
+    21300010: hero_idle_5
+    21300012: hero_idle_6
+    21300014: hero_idle_7
     21300016: hero_walk_0
     21300018: hero_walk_1
     21300020: hero_walk_2
@@ -65,7 +65,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -111,7 +111,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hero_spritesheet_0
+      name: hero_idle_0
       rect:
         serializedVersion: 2
         x: 10
@@ -125,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hero_spritesheet_1
+      name: hero_idle_1
       rect:
         serializedVersion: 2
         x: 92
@@ -139,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hero_spritesheet_2
+      name: hero_idle_2
       rect:
         serializedVersion: 2
         x: 175
@@ -153,7 +153,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hero_spritesheet_3
+      name: hero_idle_3
       rect:
         serializedVersion: 2
         x: 256
@@ -167,7 +167,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hero_spritesheet_4
+      name: hero_idle_4
       rect:
         serializedVersion: 2
         x: 338
@@ -181,7 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hero_spritesheet_5
+      name: hero_idle_5
       rect:
         serializedVersion: 2
         x: 416
@@ -195,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hero_spritesheet_6
+      name: hero_idle_6
       rect:
         serializedVersion: 2
         x: 495
@@ -209,7 +209,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hero_spritesheet_7
+      name: hero_idle_7
       rect:
         serializedVersion: 2
         x: 572
@@ -315,7 +315,7 @@ TextureImporter:
         width: 64
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -329,7 +329,7 @@ TextureImporter:
         width: 65
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,7 +343,7 @@ TextureImporter:
         width: 45
         height: 72
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,7 +357,7 @@ TextureImporter:
         width: 51
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -371,7 +371,7 @@ TextureImporter:
         width: 80
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,7 +385,7 @@ TextureImporter:
         width: 80
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
