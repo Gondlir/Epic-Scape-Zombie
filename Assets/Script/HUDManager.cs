@@ -28,6 +28,6 @@ public class HUDManager : MonoBehaviour {
 
     public void UpdateArmmount()
     {
-        gold.text = Player.instance.Gold.ToString();
+        armmount.text = WeaponManager.instance.AmmounitionCurrent + "/" + WeaponManager.instance.AmmounitionMax;
     }
 }

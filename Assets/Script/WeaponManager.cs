@@ -11,13 +11,28 @@ public class WeaponManager : MonoBehaviour {
     public Weapon Weapon;
 
     public int AmmounitionMax { get; set; }
-    public int AmmounitionCurrent { get { return currentAmmountion; } set { currentAmmountion = value; } }
+    public int AmmounitionCurrent
+    {
+        get { return currentAmmountion; }
+        set
+        {
+            currentAmmountion = value;
+            HUDManager.instance.UpdateArmmount();
+        } }
 
     public static WeaponManager instance;
 
     private void Awake()
     {
         instance = this;
+    }
+
+    private void Start()
+    {
+        AmmounitionMax = Weapon.AmmounitionMax;
+        currentAmmountion = Weapon.AmmounitionMax;
+        HUDManager.instance.UpdateArmmount();
+        
     }
 
     public void Shoot()

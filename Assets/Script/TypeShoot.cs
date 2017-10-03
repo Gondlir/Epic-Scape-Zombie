@@ -25,18 +25,19 @@ public class TypeShoot : MonoBehaviour {
     {
         if (Input.GetKeyDown(keyCodeShoot))
         {
-            InvokeRepeating("AutomaticAsyc", 0, .5f);
+            InvokeRepeating("AutomaticAsyc", 0, .3f);
+        }
+        else if (Input.GetKeyUp(keyCodeShoot))
+        {
+            CancelInvoke("AutomaticAsyc");
         }
     }
 
     private void AutomaticAsyc()
     {
-        if (Input.GetKey(keyCodeShoot) && WeaponManager.instance.AmmounitionCurrent > 0)
-        {
-            Debug.Log("Shoot Automatic");
-            --WeaponManager.instance.AmmounitionCurrent;
-        }
-        else
+        Debug.Log("Shoot Automatic");
+        --WeaponManager.instance.AmmounitionCurrent;
+        if(WeaponManager.instance.AmmounitionCurrent < 1)
             CancelInvoke("AutomaticAsyc");
     }
 }
