@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class TypeShoot : MonoBehaviour {
 
+    [SerializeField] private GameObject ball;
+
     public static KeyCode keyCodeShoot = KeyCode.X;
+
     public static TypeShoot instance;
 
     private void Awake()
@@ -18,6 +21,8 @@ public class TypeShoot : MonoBehaviour {
         {
             Debug.Log("Shoot Manual");
             --WeaponManager.instance.AmmounitionCurrent;
+
+            GameObject ballShoot = Instantiate(ball, WeaponManager.instance.lookArm.position, ball.transform.rotation);
         }
     }
 

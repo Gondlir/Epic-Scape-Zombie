@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponManager : MonoBehaviour {
 
-    [SerializeField] private Transform lookArm;
+    public Transform lookArm;
 
     [SerializeField] private int currentAmmountion;
 
