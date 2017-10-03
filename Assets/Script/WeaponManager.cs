@@ -6,21 +6,29 @@ public class WeaponManager : MonoBehaviour {
 
     [SerializeField] private Transform lookArm;
 
-    public Weapon Weapon { get; set; }
+    [SerializeField] private int currentAmmountion;
+
+    public Weapon Weapon;
 
     public int AmmounitionMax { get; set; }
-    public int AmmounitionCurrent { get; set; }
+    public int AmmounitionCurrent { get { return currentAmmountion; } set { currentAmmountion = value; } }
+
+    public static WeaponManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void Shoot()
     {
-        if (AmmounitionCurrent == 0)
+        if (currentAmmountion == 0)
         {
             Debug.Log("Not Ammounition");
             return;
         }
         Weapon.Shoot();
-        --AmmounitionCurrent;
+        
         HUDManager.instance.UpdateArmmount();
-        Debug.Log("Shoot");
     }
 }

@@ -54,10 +54,12 @@ public class PhysicsController : MonoBehaviour {
         posCurrent.x = collider.bounds.max.x - skinWidht;
         posRay.right = posCurrent;
 
+#if UNITY_EDITOR
         Debug.DrawRay(posRay.down, new Vector2(0, -0.05f), Color.blue);
         Debug.DrawRay(posRay.up, Vector2.up, Color.blue);
         Debug.DrawRay(posRay.left, Vector2.left, Color.blue);
         Debug.DrawRay(posRay.right, Vector2.right, Color.blue);
+#endif
     }
 
     public void Move(float velocity)

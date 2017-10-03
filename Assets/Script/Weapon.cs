@@ -1,36 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewWeapon", menuName = "Assets/Weapon")]
-public class Weapon : MonoBehaviour {
+[CreateAssetMenu(fileName = "NewWeapon", menuName = "Inventory/Weapon", order = 1)]
+public class Weapon : ScriptableObject {
 
     public int damage;
     public int AmmounitionMax;
-    public TypeShoot typeShoot;
-    
+
+    public TypeShootFlag typeShootFlag;
+
 
     public void Shoot()
     {
-        KeyCode keyCodeShoot = KeyCode.X;
-        switch (typeShoot)
+        switch (typeShootFlag)
         {
-            case TypeShoot.Manual:
-                if (Input.GetKeyDown(keyCodeShoot))
-                {
-
-                }
+            case TypeShootFlag.Manual:
+                TypeShoot.instance.Manual();
                 break;
-            case TypeShoot.Automatic:
-                if(Input.GetKey(keyCodeShoot))
-                {
-
-                }
+            case TypeShootFlag.Automatic:
+                TypeShoot.instance.Automatic();
                 break;
             default:
+                Debug.LogWarning("Not Defined Shoot");
                 break;
         }
     }
 }
-
-public enum TypeShoot { Manual, Automatic}
